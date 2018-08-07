@@ -1,7 +1,7 @@
 FROM php:7.0-apache
 RUN apt-get update && \
 apt-get upgrade -y && \
-apt-get --no-cache -y add \
+apt-get -y add \
     bash \
     git \
     ca-certificates \

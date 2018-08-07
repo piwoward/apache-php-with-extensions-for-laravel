@@ -1,5 +1,5 @@
 FROM php:7.0-apache
-apk update && \
+RUN apk update && \
 apk upgrade && \
 apk --no-cache add \
     bash \

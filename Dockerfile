@@ -1,7 +1,7 @@
 FROM php:7.0-apache
-RUN apk update && \
-apk upgrade && \
-apk --no-cache add \
+RUN apt-get update && \
+apt-get upgrade && \
+apt-get --no-cache add \
     bash \
     git \
     ca-certificates \

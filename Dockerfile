@@ -15,3 +15,11 @@ RUN a2enmod proxy proxy_ajp proxy_http rewrite deflate headers proxy_balancer pr
 RUN docker-php-ext-install pdo pdo_mysql zip mysqli gd opcache
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     composer global require "hirak/prestissimo:^0.3" 
+
+# install nodejs
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get -y install python-software-properties git build-essential
+RUN add-apt-repository -y ppa:chris-lea/node.js
+RUN apt-get update
+RUN apt-get -y install nodejs

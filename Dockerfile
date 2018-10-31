@@ -1,5 +1,6 @@
 FROM php:7.2-apache
 RUN apt-get update && \
+apt-key update -y && \
 apt-get upgrade -y && \
 apt-get install -y \
     bash \

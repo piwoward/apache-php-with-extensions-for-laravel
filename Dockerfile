@@ -20,5 +20,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     composer global require "hirak/prestissimo:^0.3" 
 
 # install nodejs
-RUN curl -sL https://rpm.nodesource.com/setup_11.x | bash
+curl -sL https://deb.nodesource.com/setup_11.x  | bash
 RUN install nodejs

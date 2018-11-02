@@ -20,9 +20,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     composer global require "hirak/prestissimo:^0.3" 
 
 # install nodejs
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get -y install git gcc make
-RUN add-apt-repository -y ppa:chris-lea/node.js
-RUN apt-get update
-RUN apt-get -y install nodejs
+RUN curl -sL https://rpm.nodesource.com/setup_11.x | sudo -E bash -
+RUN install nodejs

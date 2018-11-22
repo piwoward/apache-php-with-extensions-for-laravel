@@ -13,6 +13,7 @@ apt-get install -y \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
+    protobuf \
     software-properties-common \
     mysql-client
 RUN a2enmod proxy proxy_ajp proxy_http rewrite deflate headers proxy_balancer proxy_connect proxy_html substitute expires

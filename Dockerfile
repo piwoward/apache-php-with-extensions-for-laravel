@@ -4,6 +4,7 @@ apt-get install -y gnupg && \
 apt-key update -y && \
 apt-get upgrade -y && \
 apt-get install -y \
+    automake \
     bash \
     git \
     ca-certificates \

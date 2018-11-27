@@ -1,6 +1,6 @@
 FROM php:7.2-apache
 RUN apt-get update 
-RUN apt-get install -y gnupg && apt-key update -y && apt-get upgrade -y && 
+RUN apt-get install -y gnupg && apt-key update -y && apt-get upgrade -y
 RUN apt-get install -y bash git mc ca-certificates curl zip zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev software-properties-common mysql-client mc htop
 RUN a2enmod proxy proxy_ajp proxy_http rewrite deflate headers proxy_balancer proxy_connect proxy_html substitute expires vhost_alias
 RUN docker-php-ext-install pdo pdo_mysql zip mysqli gd opcache

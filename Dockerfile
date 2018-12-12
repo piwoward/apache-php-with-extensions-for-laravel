@@ -13,3 +13,7 @@ RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash
 RUN apt-get install -y nodejs
 # ssh-dss
 RUN export GIT_SSH_COMMAND='ssh -oHostKeyAlgorithms=+ssh-dss'
+# git lfs
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    apt-get install git-lfs && \
+    git lfs install
